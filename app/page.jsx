@@ -205,10 +205,11 @@ export default function Home() {
             <div className="sub-menu-content-wrapper">
               <h1>Solutions</h1>
               <p className="sub-content-wrapper">
-                Discover How Squirro's AI & Semantic Search Is Revolutionizing
-                Enterprise Search. Transform Your Data Strategy Now!
+                Discover How Squirro&apos; AI & Semantic Search Is
+                Revolutionizing Enterprise Search. Transform Your Data Strategy
+                Now!
               </p>
-              <button className="demoButton">Read Our Buyer's Guide</button>
+              <button className="demoButton">Read Our Buyer&apos; Guide</button>
             </div>
             <ul>
               <li>
@@ -686,6 +687,7 @@ export default function Home() {
                       }`}
                       onClick={() => setActiveTab(tab.id)}
                       ref={(el) => (tabsRef.current[index] = el)}
+                      key={index}
                     >
                       <div className="flex items-center">
                         {React.createElement(iconMapping[tab.icon], {
