@@ -2,32 +2,251 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+svg,
+svg g,
+svg path {
+  fill: none !important;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+img {
+  border-radius: 8px;
+}
+
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 10px 0px;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+  transition: background-color 0.3s, border-bottom 0.3s;
+}
+
+.menu-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 10px 0px;
+  max-width: 1280px;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  transition: background-color 0.3s, border-bottom 0.3s;
+  background-color: transparent;
+}
+
+.header-wrapper.scrolled {
+  background-color: #fdefe7;
+  border-bottom: 1px solid white;
+}
+
+.logo-wrapper {
+  width: 150px;
+  height: 100%;
+  margin-right: 1rem;
+}
+
+.left-menu {
+  display: flex;
+  align-items: center;
+}
+
+.menuList {
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.linkList {
+  color: #001d32;
+  text-decoration: none;
+  padding: 0.75rem;
+  display: block;
+  transition: opacity 0.7s ease;
+}
+
+.menuRoot {
+  background-color: #fdefe7;
+  position: absolute;
+  width: 100%;
+  top: 85px;
+  transition: height 0.3s ease;
+  overflow: hidden;
+  z-index: 99999;
+  height: 0; /* Start collapsed */
+}
+
+.subMenus {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.7s ease;
+  max-width: 1205px;
+  margin: auto;
+}
+
+.sub-menu-cta {
+  width: 300px;
+  height: 150px;
+}
+
+.subMenus.active {
+  display: flex; /* Show sub-menu when active */
+  opacity: 1;
+  transition: opacity 0.7s ease;
+  justify-content: left;
+  margin-top: 2rem;
+}
+
+.menuThree > .sub-menu-cta {
+  flex: 1;
+}
+
+.right-menu-wrapper {
+  display: flex;
+}
+
+.demoButton {
+  padding: 10px 20px;
+  background: #d24a20;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.iconContainer {
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+}
+
+.iconContainer svg {
+  margin-left: 10px;
+}
+
+.main-content {
+  overflow: hidden;
+}
+
+h2 {
+  color: #001d32;
+}
+
+.sub-menu-content-wrapper {
+  max-width: 400px;
+  width: 100%;
+  padding-right: 1rem;
+}
+.sub-content-wrapper {
+  max-width: 300px;
+  width: 100%;
+  padding-right: 1rem;
+}
+
+.subMenus.active ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 500px;
+  padding-left: 0;
+}
+.subMenus.active li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.subMenus li > svg {
+  margin-right: 0.25rem;
+}
+.sub-menu-cta img {
+  margin-bottom: 0.5rem;
+}
+
+.smaller-video {
+  transform: scale(0.9);
+  transform-origin: center;
+}
+
+.slider-container {
+  overflow: hidden;
+  width: 100%;
+}
+
+.image-slider {
+  display: flex;
+  animation: slide 20s linear infinite;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-700px);
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
+.image-slider img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin: 0rem 1.5rem;
+}
+
+.text-cta-content {
   background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    90deg,
+    rgba(0, 29, 48, 1) 0%,
+    rgba(0, 52, 87, 1) 39%,
+    rgba(0, 90, 156, 1) 100%
+  );
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.icon-wrapper {
+  position: absolute;
+  top: -100px;
+  left: -100px;
+  width: 500px;
+  z-index: 1;
+  opacity: 0.3;
+}
+
+.tab-button-content {
+  max-width: 400px;
+}
+
+.description-transition {
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.description-visible {
+  opacity: 1;
+  height: auto;
+}
+
+.tabs-container {
+  position: relative;
+}
+
+.tab-background {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  background-color: #fdefe7;
+  transition: top 0.3s ease, height 0.3s ease;
+  z-index: 0;
+}
+
+.tab-button {
+  position: relative;
+  z-index: 1;
+  background-color: transparent;
 }

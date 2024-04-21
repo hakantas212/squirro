@@ -1,8 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +13,99 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <head>
+        <link
+          rel="SHORTCUT ICON"
+          href="https://squirro.com/hubfs/WEBSITE/Global%20assets/Favicon/Favicon-Squirro-1023.png"
+        />
+        <link
+          className="hs-async-css"
+          rel="stylesheet"
+          href="https://squirro.com/hs-fs/hub/139651395/hub_generated/template_assets/79438134232/1709041122885/sr/css/sr-base.min.css"
+          as="style"
+        />
+        <link
+          rel="stylesheet"
+          href="https://squirro.com/hs-fs/hub/139651395/hub_generated/module_assets/81283813823/1702648307255/module_81283813823_SR_Navigation_01_Squirro_Custom.min.css"
+        />
+        <link
+          rel="stylesheet"
+          href="https://squirro.com/hs-fs/hub/139651395/hub_generated/module_assets/87814289639/1702394181398/module_87814289639_squirro-chatbot.min.css"
+        />
+        <link
+          rel="stylesheet"
+          href="https://squirro.com/hs-fs/hub/139651395/hub_generated/module_assets/1705915599031/module_79442108144_SR_Two_Col_03.css"
+        />
+        <link
+          rel="stylesheet"
+          href="https://squirro.com/hs-fs/hub/139651395/hub_generated/module_assets/82277767637/1703074718820/module_82277767637_Squirro_Logo_Row_Fader_Global.min.css"
+        />
+        <link
+          rel="stylesheet"
+          href="https://squirro.com/hs-fs/hub/139651395/hub_generated/module_assets/79438323136/1702011617079/module_79438323136_SR_Hero_04.min.css"
+        />
+        <link
+          rel="stylesheet"
+          href="https://squirro.com/hs-fs/hub/139651395/hub_generated/module_assets/1702013207327/module_79438720963_SR_Tabs_Horizontal_01.css"
+        />
+        <link
+          rel="stylesheet"
+          href="https://squirro.com/hs-fs/hub/139651395/hub_generated/module_assets/79438287557/1701957018116/module_79438287557_SR_Case_Studies_Slider_02.min.css"
+        />
+        <link
+          className="hs-async-css"
+          rel="stylesheet"
+          href="https://squirro.com/hs-fs/hub/139651395/hub_generated/template_assets/79438136288/1698382515420/sr/css/slick.min.css"
+          as="style"
+        />
+        <noscript>
+          <link
+            rel="stylesheet"
+            href="https://squirro.com/hs-fs/hub/139651395/hub_generated/template_assets/79438136288/1698382515420/sr/css/slick.min.css"
+          />
+        </noscript>
+        <link
+          rel="stylesheet"
+          href="https://squirro.com/hs-fs/hub/139651395/hub_generated/module_assets/79705141237/1702986402527/module_79705141237_SR_Three_Col_01_Squirro_Custom.min.css"
+        />
+        <link
+          rel="stylesheet"
+          href="https://squirro.com/hs-fs/hub/139651395/hub_generated/module_assets/80254267881/1705300078475/module_80254267881_SR_Tabs_Squirro_Custom.min.css"
+        />
+        <link
+          rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
+        <link
+          rel="stylesheet"
+          href="https://squirro.com/hs-fs/hub/139651395/hub_generated/module_assets/79442881520/1702013420926/module_79442881520_SR_Tabs_Vertical_01.min.css"
+        />
+        <link
+          rel="stylesheet"
+          href="https://squirro.com/hs-fs/hub/139651395/hub_generated/module_assets/79433366759/1704712479254/module_79433366759_SR_Cards_Grid_02.min.css"
+        />
+        <link
+          rel="stylesheet"
+          href="https://squirro.com/hs-fs/hub/139651395/hub_generated/module_assets/80068328652/1712748960519/module_80068328652_SR_Three_Cards_Col_01_Squirro_Custom.min.css"
+        />
+        <link
+          rel="stylesheet"
+          href="https://squirro.com/hs-fs/hub/139651395/hub_generated/module_assets/79600075720/1701957916123/module_79600075720_SR_Footer_01_Squirro_Custom.min.css"
+        />
+        <link
+          className="hs-async-css"
+          rel="stylesheet"
+          href="https://squirro.com/hs-fs/hub/139651395/hub_generated/template_assets/79438134209/1707396480577/sr/css/custom-styles.min.css"
+          as="style"
+        />
+        <noscript>
+          <link
+            rel="stylesheet"
+            href="https://squirro.com/hs-fs/hub/139651395/hub_generated/template_assets/79438134209/1707396480577/sr/css/custom-styles.min.css"
+          />
+        </noscript>
+      </head>
+      <body>{children}</body>
     </html>
   );
 }
